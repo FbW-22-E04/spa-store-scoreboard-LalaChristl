@@ -6,12 +6,13 @@ const Scoreboard = () => {
 
     const {score, plusScore, minusScore} = useContext(ScoreContextProvider)
   return (
-    <div>
-        <h1>Score Board</h1>
-    <h2>Your Current Score is {score}</h2>
-    <button onClick={plusScore}>+</button>
-    <button onClick={minusScore}>-</button>
-   
+    <div className='container'>
+        <div className='inner'>
+            <h1>Score Board</h1>
+        <h2>Your Current Score is {score}</h2>
+        <button className='plus' onClick={plusScore}>+</button>
+        <button className='minus' onClick={minusScore}>-</button>
+        </div>
     </div>
   )
 }
